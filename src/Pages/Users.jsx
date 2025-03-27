@@ -38,6 +38,18 @@ const Users = () => {
     }
   };
 
+  // handle delete
+  const handleDelete = async (id) => {
+    console.log(id);
+    try {
+      await axios.delete(`https://reqres.in/api/users/${id}`);
+      const remainingUsers = users.filter((user) => user.id != id);
+      setUsers(remainingUsers);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div className="w-[90%] mx-auto">
       <h1 className="text-4xl text-center mb-6">All Users</h1>
@@ -63,7 +75,10 @@ const Users = () => {
                   <button className="cursor-pointer">
                     <FaEdit />
                   </button>
-                  <button className="cursor-pointer">
+                  <button
+                    className="cursor-pointer"
+                    onClick={() => handleDelete(user.id)}
+                  >
                     <MdDelete />
                   </button>
                 </div>
