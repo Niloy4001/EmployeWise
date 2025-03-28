@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { RiArrowLeftDoubleLine, RiArrowRightDoubleLine } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
@@ -25,6 +26,7 @@ const Users = () => {
       });
   }, [pageNumber]);
 
+  // handle pagination
   const handlePagination = (event) => {
     setPageNumber(Number(event.target.innerText));
     console.log(Number(event.target.innerText));
@@ -71,10 +73,10 @@ const Users = () => {
                   />
                 </div>
                 {/* edit and delet icon */}
-                <div className="flex gap-2">
-                  <button className="cursor-pointer">
+                <div className="flex gap-2 items-center">
+                  <Link to={`/update/${user.id}`} className="cursor-pointer">
                     <FaEdit />
-                  </button>
+                  </Link>
                   <button
                     className="cursor-pointer"
                     onClick={() => handleDelete(user.id)}
