@@ -5,6 +5,7 @@ import axios from "axios";
 import Update from "../Pages/Update";
 import Error from "../Pages/Error";
 import Login from "../Pages/Login";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -17,12 +18,21 @@ const router = createBrowserRouter([
   },
   {
     path: "/users",
-    element: <Users></Users>,
+    element: (
+      <PrivateRoute>
+        <Users></Users>
+      </PrivateRoute>
+    ),
   },
   {
     path: `/update/:id`,
-    element: <Update></Update>,
-    loader: ({params})=> axios.get(`https://reqres.in/api/users/${params.id}`)
+    element: (
+      <PrivateRoute>
+        <Update></Update>
+      </PrivateRoute>
+    ),
+    loader: ({ params }) =>
+      axios.get(`https://reqres.in/api/users/${params.id}`),
   },
   {
     path: "*",

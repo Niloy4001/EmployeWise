@@ -1,10 +1,13 @@
 import axios from "axios";
 import React from "react";
 import toast from "react-hot-toast";
-import {  useNavigate } from "react-router-dom";
+import {  useLocation, useNavigate } from "react-router-dom";
 
 const Login = () => {
     const navigate = useNavigate()
+    const { state } = useLocation();
+
+
     const handleSubmit =async (e) =>{
         e.preventDefault();
         const email = e.target.email.value;
@@ -16,7 +19,7 @@ const Login = () => {
           console.log(res.data.token);
           toast.success("Log In successfull")
           localStorage.setItem("token", res.data.token)
-          navigate("/users");
+          navigate(state ? `${state}` : "/users");
        
           
         } catch (error) {
