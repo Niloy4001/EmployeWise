@@ -4,6 +4,7 @@ import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { RiArrowLeftDoubleLine, RiArrowRightDoubleLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
+import Navbar from "../Components/Navbar";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
@@ -54,6 +55,7 @@ const Users = () => {
 
   return (
     <div className="w-[90%] mx-auto">
+      <Navbar></Navbar>
       <h1 className="text-4xl text-center mb-6">All Users</h1>
       {/* alll users */}
       {users.length > 0 && (
