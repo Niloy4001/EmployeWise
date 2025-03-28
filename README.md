@@ -4,12 +4,11 @@
 ## Introduction
 **User Manager** is a React application built for the **EmployWise Assignment** that integrates with the [Reqres API](https://reqres.in/) to perform user management functions. The app allows users to log in, view a paginated list of users, and perform CRUD operations such as editing and deleting users.
 
-## Deployment
-The project is deployed at: **[Live Demo](https://user-manager-40.netlify.app/)**
 
 ## Table of Contents
 - [Introduction](#introduction)
 - [Features](#features)
+- [Deployment](#deployment)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -17,10 +16,16 @@ The project is deployed at: **[Live Demo](https://user-manager-40.netlify.app/)*
 - [Project Structure](#project-structure)
 - [Configuration](#configuration)
 - [Error Handling](#error-handling)
-- [Bonus Features](#bonus-features)
-- [Deployment](#deployment)
-- [Contributors](#contributors)
-- [License](#license)
+- [Extra Features](#bonus-features)
+
+## Deployment
+The project is deployed at: **[Live Demo](https://user-manager-40.netlify.app/)**
+
+## Lakings
+- It has no server side implementation.
+- Used api are mock/placeholder .
+- It has no database implementation.
+- ## For above causes edit and delete functionality are temporary
 
 ## Features
 ### Level 1: Authentication Screen
@@ -52,7 +57,7 @@ The project is deployed at: **[Live Demo](https://user-manager-40.netlify.app/)*
 ## Installation
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/employeewise.git
+   git clone https://github.com/Niloy4001/User-Manager.git
    cd employeewise
    ```
 2. Install dependencies:
