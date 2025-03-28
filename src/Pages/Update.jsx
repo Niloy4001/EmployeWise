@@ -15,13 +15,13 @@ const Update = () => {
     const email = e.target.email.value;
 
     const info = { first_name: fName, last_name: lName, email, avatar, id };
-    console.log(info);
+  
 
     try {
       axios.put(`https://reqres.in/api/users/${id}`, info);
       toast.success("Updated Sucessfully");
     } catch (error) {
-      console.log(error);
+      toast.error(error.message)
     }
   };
 

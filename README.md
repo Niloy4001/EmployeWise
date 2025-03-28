@@ -5,20 +5,6 @@
 **User Manager** is a React application built for the **EmployWise Assignment** that integrates with the [Reqres API](https://reqres.in/) to perform user management functions. The app allows users to log in, view a paginated list of users, and perform CRUD operations such as editing and deleting users.
 
 
-## Table of Contents
-- [Introduction](#introduction)
-- [Deployment](#deployment)
-- [Lakings](#lakings)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [API Endpoints](#api-endpoints)
-- [Project Structure](#project-structure)
-- [Configuration](#configuration)
-- [Error Handling](#error-handling)
-- [Extra Features](#bonus-features)
-
 ## Deployment
 The project is deployed at: **[Live Demo](https://user-manager-40.netlify.app/)**
 
@@ -49,11 +35,11 @@ The project is deployed at: **[Live Demo](https://user-manager-40.netlify.app/)*
 - **React** (Frontend framework)
 - **Axios** (HTTP requests)
 - **React Router** (Navigation)
-- **Tailwind CSS + DaisyUI** (UI styling)
+- **Tailwind CSS** (UI styling)
 - **LocalForage** (Local storage management)
 - **React Hot Toast** (Notifications)
 - **Vite** (Development server)
-- **ESLint** (Code quality)
+
 
 ## Installation
 1. Clone the repository:

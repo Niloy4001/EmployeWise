@@ -5,6 +5,7 @@ import { MdDelete } from "react-icons/md";
 import { RiArrowLeftDoubleLine, RiArrowRightDoubleLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import Navbar from "../Components/Navbar";
+import toast from "react-hot-toast";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
@@ -18,19 +19,15 @@ const Users = () => {
         setTotalPages(
           [...Array(response.data.total_pages).keys()].map((i) => i + 1)
         );
-        console.log(response.data.data);
-        console.log(response.data.total_pages);
-        // console.log('state',totalPages);
       })
       .catch((error) => {
-        console.error("Error:", error);
+        toast.error(error);
       });
   }, [pageNumber]);
 
   // handle pagination
   const handlePagination = (event) => {
     setPageNumber(Number(event.target.innerText));
-    console.log(Number(event.target.innerText));
   };
 
   const handlePrevNext = (status) => {
@@ -43,13 +40,13 @@ const Users = () => {
 
   // handle delete
   const handleDelete = async (id) => {
-    console.log(id);
     try {
       await axios.delete(`https://reqres.in/api/users/${id}`);
       const remainingUsers = users.filter((user) => user.id != id);
+      toast.success("Deleted successfully");
       setUsers(remainingUsers);
     } catch (error) {
-      console.log(error);
+      toast.error(error)
     }
   };
 
