@@ -92,7 +92,6 @@ The project is deployed at: **[Live Demo](https://user-manager-40.netlify.app/)*
 - Redirects users to the login page if the token is missing or expired.
 
 ## Extra Features
-- Client-side search and filtering for users.
 - React Router for seamless navigation.
 - Hosted on a free deployment platform ( Netlify ).
 
